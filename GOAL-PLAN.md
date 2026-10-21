@@ -12,10 +12,13 @@
 - JSON不支持注释, 所有决策记录于本文件
 
 ## 结构
-资源包本体位于 Create-Schematicannon-RA2-Voice-Construction-Complete/ 子目录(仓库根放GOAL-PLAN.md/README等工程文件,不进包;打zip时只压缩Create-Schematicannon-RA2-Voice-Construction-Complete内的内容,pack.mcmeta必须位于压缩包根):
-./Create-Schematicannon-RA2-Voice-Construction-Complete/pack.mcmeta
-./Create-Schematicannon-RA2-Voice-Construction-Complete/assets/create/sounds.json
-./Create-Schematicannon-RA2-Voice-Construction-Complete/assets/ra2/sounds/construction_complete.ogg
+三阵营独立包, 目录后缀 (Eva)(Zofia)(Yuri), 仓库根放GOAL-PLAN.md/README等工程文件不进包; 每包独立打zip(只压缩该包内层内容, pack.mcmeta必须位于压缩包根); sounds.json 三包相同(ra2:construction_complete + pitch 1.4286), 仅音频与 pack.mcmeta 描述后缀不同:
+./Create-Schematicannon-RA2-Voice-Construction-Complete-(Eva)/pack.mcmeta
+./Create-Schematicannon-RA2-Voice-Construction-Complete-(Eva)/assets/create/sounds.json
+./Create-Schematicannon-RA2-Voice-Construction-Complete-(Eva)/assets/ra2/sounds/construction_complete.ogg
+./Create-Schematicannon-RA2-Voice-Construction-Complete-(Zofia)/...同构
+./Create-Schematicannon-RA2-Voice-Construction-Complete-(Yuri)/...同构
+源音频: Eva=F:\Download\RA2 ceva048.ogg(已实测), Zofia=F:\Download\RA2 csof048.ogg, Yuri=F:\Download\RA2 cyur048.ogg
 
 源音频: F:\Download\Video\RA2 ceva048.ogg (10.2KB)
 
@@ -28,7 +31,7 @@
 - [x] 验证 ogg 为 Vorbis 编码 (1.20.1 不支持 Opus) — 已验: OggS容器/vorbis编码/单声道22050Hz, 无需转码
 - [x] 游戏内实测 — 复测通过: 触发成功 + pitch 1.4286 补偿后音高恢复, 项目验收完成
 - [x] git init + GitHub 发布, MPL-2.0 — https://github.com/LMaxRouterCN/Create-Schematicannon-RA2-Voice-Construction-Complete (main + tag v1.0.0 + Release 含 zip)
-- [ ] (预告) 两阵营版本: 苏军(Zofia)与尤里素材已就位 F:\Download\ (csof048.ogg / cyur048.ogg), 命名约定: 文件夹后缀 (Eva)(Zofia)(Yuri)
+- [x] 三阵营版本: 已构建+推送 (d949195); v1.0.0 单release挂三zip, 资产名被GitHub服务端改写为-.Eva/-.Zofia/-.Yuri(括号被吃, 用户拍板接受), 发布完成; 待游戏内三包实测
 ## 后续需求: 替换加农炮 Start/Pause/Stop 按钮音效(已取消 — 用户决定不做; launch_block 为发射爆炸声亦不换; 以下留档备用)
 - Create sounds.json 无按钮专属条目(仅 schematicannon_finish / schematicannon_launch_block 两个)
 - launch_block 可换: 方法同 finish(覆盖 create:schematicannon_launch_block 条目, 注意其调用 playExisting 可能带非1参数需补偿), 未做
