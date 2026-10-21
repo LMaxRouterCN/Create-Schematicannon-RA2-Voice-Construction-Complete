@@ -4,29 +4,24 @@
 
 ## English
 
-A Minecraft resource pack that replaces the Create mod's Schematicannon "printing finished" chime with the classic *Red Alert 2* adjutant voice line: **"Construction complete."**
+A simple Minecraft resource pack that replaces the Create mod's Schematicannon "printing finished" chime with the classic *Red Alert 2* adjutant voice line: **"Construction complete."**
 
 ### Features
 
 - Replaces `create:schematicannon_finish` (the note block bell) with the RA2 adjutant voice line
-- Pitch-corrected: Create plays this event at a hardcoded 0.7 pitch (about -6 semitones). The pack compensates with a 1.4286 multiplier, so the voice plays at its natural pitch (residual deviation ~0.02 cent — imperceptible)
-
-### Requirements
-
-- Minecraft 1.20.1
-- [Create](https://modrinth.com/mod/create) 0.5.1 for 1.20.1
+- Pitch-corrected: Create plays this event at a hardcoded 0.7 pitch (about -6 semitones); a 1.4286 multiplier is needed to compensate, so the voice plays at its natural pitch (deviation ~0.02 cent — theoretically inaudible)
 
 ### Known limitation (Forge vs. Fabric)
 
-Under Forge, a resource pack's `sounds.json` merges with the mod's file entry-by-entry, so this minimal override works. Fabric has no such mechanism — a resource pack's `sounds.json` fully replaces Create's entire sound table (all other Create sounds would be lost). This pack is designed for Forge; no Fabric adaptation is planned, and this note is the only accommodation.
+Under Forge, a resource pack's `sounds.json` merges with the mod's file entry-by-entry, so this minimal override works. Fabric has no such mechanism — a resource pack's `sounds.json` fully replaces Create's entire sound table (all other Create sounds would be lost).
+
+> Note: not yet tested in-game; behavior uncertain.
 
 ### Install
 
-**Folder:** copy the `Create-Schematicannon-RA2-Voice-Construction-Complete` folder into your instance's `resourcepacks/` directory.
+**Folder:** copy the faction folder of your choice (`Create-Schematicannon-RA2-Voice-Construction-Complete-(Eva)`, `-(Zofia)`, or `-(Yuri)`) into your instance's `resourcepacks/` directory.
 
 **Zip:** compress the *contents* of that folder (so `pack.mcmeta` sits at the archive root), drop the zip into `resourcepacks/`, enable it in-game.
-
-Then let a Schematicannon finish printing a schematic — and listen.
 
 ### How it works
 
@@ -54,13 +49,13 @@ Then let a Schematicannon finish printing a schematic — and listen.
 
 Forge 下资源包 sounds.json 按条目与模组文件合并，最小覆盖成立；Fabric 无此机制，资源包的 sounds.json 会整体替换 Create 的全表（其余音效全部丢失）。
 
->未经过实机测试,我不确定
+> 注：未经过实机测试，效果不确定。
 
 ### 安装
 
-**文件夹方式：** 把 `Create-Schematicannon-RA2-Voice-Construction-Complete` 文件夹整个复制到实例的 `resourcepacks/` 目录。
+**文件夹方式：** 把对应阵营的 `Create-Schematicannon-RA2-Voice-Construction-Complete-(Eva)` / `-(Zofia)` / `-(Yuri)` 文件夹整个复制到实例的 `resourcepacks/` 目录。
 
-**Zip 方式：** 压缩该文件夹（保证 `pack.mcmeta` 位于压缩包根目录），把 zip 放进 `resourcepacks/`，在游戏内启用。
+**Zip 方式：** 压缩该文件夹内的内容（保证 `pack.mcmeta` 位于压缩包根目录），把 zip 放进 `resourcepacks/`，在游戏内启用。
 
 ### 实现原理
 
