@@ -43,29 +43,24 @@ Then let a Schematicannon finish printing a schematic — and listen.
 
 ## 中文
 
-一个 Minecraft 资源包：把机械动力（Create）蓝图加农炮"打印完成"的音符盒钟声，替换为红色警戒2的副官语音——**"建造完毕。"**
+一个简单的 Minecraft 资源包：把机械动力（Create）蓝图加农炮打印完成后的音符盒钟声，替换为红色警戒2的副官语音"Construction complete."
 
 ### 功能
 
 - 将 `create:schematicannon_finish`（原音符盒钟声）替换为红警2副官语音
-- 音调已修正：Create 以硬编码的 0.7 音调播放该事件（约降低 6 个半音），本资源包用 1.4286 的乘数补偿，使语音以原始音调播放（残余偏差约 0.02 音分，无法察觉）
-
-### 环境要求
-
-- Minecraft 1.20.1
-- [Create（机械动力）](https://modrinth.com/mod/create) 1.20.1 版 0.5.1
+- 音调已修正：Create 以硬编码的 0.7 音调播放该事件（约降低 6 个半音），需要用 1.4286 的乘数补偿，使语音以原始音调播放（偏差约 0.02 音分，理论上听不出来）
 
 ### 已知限制（Forge 与 Fabric）
 
-Forge 下资源包 sounds.json 按条目与模组文件合并，最小覆盖成立；Fabric 无此机制，资源包的 sounds.json 会整体替换 Create 的全表（其余音效全部丢失）。本包按 Forge 设计，不做 Fabric 适配，仅在此提示。
+Forge 下资源包 sounds.json 按条目与模组文件合并，最小覆盖成立；Fabric 无此机制，资源包的 sounds.json 会整体替换 Create 的全表（其余音效全部丢失）。
+
+>未经过实机测试,我不确定
 
 ### 安装
 
 **文件夹方式：** 把 `Create-Schematicannon-RA2-Voice-Construction-Complete` 文件夹整个复制到实例的 `resourcepacks/` 目录。
 
-**Zip 方式：** 压缩该文件夹的*内容*（保证 `pack.mcmeta` 位于压缩包根），把 zip 放进 `resourcepacks/`，在游戏内启用。
-
-然后让蓝图加农炮打印完一张蓝图——听。
+**Zip 方式：** 压缩该文件夹（保证 `pack.mcmeta` 位于压缩包根目录），把 zip 放进 `resourcepacks/`，在游戏内启用。
 
 ### 实现原理
 
